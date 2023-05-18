@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+import { RequestUser } from 'src/app/models/RequestUser';
+import { AuthServiceService } from 'src/app/services/auth-service.service';
 
 @Component({
   selector: 'app-login',
@@ -7,4 +9,21 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  public user:RequestUser;
+
+  constructor(
+    private authService: AuthServiceService
+  ) {
+    this.user = new RequestUser();
+    this.user.email = '';
+    this.user.password = '';
+  }
+
+async doLogin(){
+  try {
+    await this.authService.login(this.user);
+  } catch (error) {
+    console.log(error);
+  }
+}
 }

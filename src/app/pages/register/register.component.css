@@ -16,7 +16,6 @@
 }
 
 form{
-  margin-top: 2rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -27,6 +26,18 @@ form{
 
 .user_space{
   margin-top: 2rem;
+  width: 468.3px;
+}
+.name_space{
+  margin-top: 1rem;
+  width: 468.3px;
+}
+.phone_space{
+  margin-top: 1rem;
+  width: 468.3px;
+}
+.password_space{
+  margin-top: 1rem;
   width: 468.3px;
 }
 
@@ -47,9 +58,6 @@ label{
   align-content: center;
 }
 
-.password_space{
-  margin-top: 2rem;
-}
 .image{
   width: 100%;
   height: 100%;

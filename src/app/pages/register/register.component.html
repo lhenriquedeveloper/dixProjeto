@@ -1,0 +1,32 @@
+<div class="container">
+  <p-card header="Cadastro de Usuários" [style]="{ width: '800px', height:'100%', color: '#495057'}">
+    <form class="m-0">
+      <div class="user_space">
+        <label htmlFor="password">Email: </label>
+        <input [(ngModel)]="register.email" name="email" class="p-inputtext-sm" pInputText id="email" aria-describedby="email-help" placeholder="Email"  />
+        <small id="username-help">Digite o seu email para prosseguir com o cadastro.</small>
+    </div>
+    <div class="name_space">
+      <label htmlFor="password">Nome: </label>
+      <input [(ngModel)]="register.name" name="name" class="p-inputtext-sm" pInputText id="name" aria-describedby="name-help" placeholder="Nome"  />
+      <small id="username-help">Digite o seu telefone para prosseguir com o cadastro.</small>
+  </div>
+  <div class="phone_space">
+    <label htmlFor="password">Telefone: </label>
+    <input [(ngModel)]="register.phone" name="phone" class="p-inputtext-sm" pInputText id="phone" aria-describedby="phone-help" placeholder="Telefone"  />
+    <small id="username-help">Digite o seu telefone para prosseguir com o cadastro.</small>
+</div>
+    <div class="password_space">
+      <label htmlFor="password">Senha: </label>
+      <input [(ngModel)]="register.password" type="password" class="p-inputtext-sm" name="password" pInputText id="password" aria-describedby="password-help" placeholder="Senha"/>
+      <small id="password-help">Digite a sua senha para prosseguir com o cadastro.</small>
+  </div>
+  <div class="button_space">
+    <button class="button_login" type="button" (click)="doRegister()">Cadastrar</button>
+</div>
+    </form>
+</p-card>
+<div class="image">
+  <img src="../../../assets/registerHorse.jpg" alt="cavalo na água" />
+</div>
+</div>

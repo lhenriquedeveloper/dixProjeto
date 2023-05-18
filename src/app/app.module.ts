@@ -9,15 +9,15 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from "@angular/forms";
-
-
+import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +27,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     CardModule,
     ButtonModule,
     HttpClientModule,
-    ReactiveFormsModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
