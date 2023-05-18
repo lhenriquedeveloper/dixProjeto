@@ -15,7 +15,7 @@ export class LoginComponent {
     private authService: AuthServiceService
   ) {
     this.user = new RequestUser();
-    this.user.email = '';
+    this.user.username = '';
     this.user.password = '';
   }
 

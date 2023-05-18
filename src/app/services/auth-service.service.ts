@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { RequestUser } from '../models/RequestUser';
 import { ResponseUser } from '../models/ResponseUser';
 import { RequestRegister } from '../models/RequestRegister';
-
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,7 @@ import { RequestRegister } from '../models/RequestRegister';
 export class AuthServiceService {
   constructor(
     private http: HttpClient,
+    public router: Router
     ) {}
 
   //Login Function
@@ -21,7 +22,9 @@ export class AuthServiceService {
     },
     }).toPromise();
     if (result && result.data.token) {
+      console.log(result);
       localStorage.setItem('token', result.data.token);
+      this.router.navigate(['/home']);
       return true;
     }
     else{

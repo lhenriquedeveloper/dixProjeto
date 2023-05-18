@@ -1,11 +1,11 @@
 import { IRequestUser } from "../interfaces/IResquestUser";
 
 export class RequestUser implements IRequestUser{
-  email:string
+  username:string
   password: string;
 
   constructor(){
-    this.email = ''
+    this.username = ''
     this.password = ''
   }
 }

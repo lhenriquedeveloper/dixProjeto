@@ -29,6 +29,9 @@ form{
   margin-top: 2rem;
   width: 468.3px;
 }
+.password_space{
+  width: 468.3px;
+}
 
 input{
   margin-top: 5px;

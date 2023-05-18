@@ -1,21 +1,21 @@
 import { IResponseUser } from "../interfaces/IResponseUser";
 
 export class ResponseUser implements IResponseUser{
+  message: string;
   data:{
-    name:string;
-    token:string;
-    token_type:string;
-    expires_at:string;
-  };
-  message:string;
+    user:{}
+    tenants:[]
+    token: string;
+    }
+
 
   constructor(){
+    this.message = ''
     this.data = {
-      name:'',
-      token:'',
-      token_type:'',
-      expires_at:''
-    };
-    this.message = '';
+      user:{},
+      tenants:[],
+      token: ''
+    }
   }
+
 }
