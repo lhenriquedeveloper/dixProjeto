@@ -1,1 +1,33 @@
-<p>home works!</p>
+<app-header></app-header>
+<div class="infocontent">
+  <img src="../../../assets/leilao.jpg" alt="Divulgação de Leilão">
+</div>
+<div class="leilaocontent">
+  <div class="title_area">
+    <h1>Leilões</h1>
+  </div>
+  <p-card [style]="{}">
+    <div class="insidemaincard">
+      <p-card *ngFor="let leilao of leiloes" header="{{leilao.name}}" [style]="{ width: '360px'}">
+        <ng-template pTemplate="header">
+            <img alt="Foto do Leilão" src="https://bis365.com.br/bid365/storage/{{leilao.image}}" />
+        </ng-template>
+        <div class="span_area">
+            <i class="pi pi-car">
+              <span >{{leilao.city}}</span>
+            </i>
+            <i class="pi pi-calendar">
+              <span>{{leilao.date}}</span>
+            </i>
+            <p>Assista esse leilão agora!</p>
+        </div>
+        <ng-template pTemplate="footer">
+            <a href="{{leilao.link}}"aria-label="Assista esse leilão">
+              <p-button label="Assistir" icon="pi pi-video" styleClass="p-button-danger"></p-button>
+            </a>
+            <p-button label="Mais informações" styleClass="p-button-link" [style]="{ 'margin-left': '.5em' }"></p-button>
+        </ng-template>
+    </p-card>
+    </div>
+</p-card>
+</div>

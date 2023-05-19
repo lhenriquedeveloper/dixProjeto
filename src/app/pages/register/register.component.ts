@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RequestRegister } from 'src/app/models/RequestRegister';
 import { AuthServiceService } from 'src/app/services/auth-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +13,8 @@ export class RegisterComponent {
   public register:RequestRegister;
 
   constructor(
-    private authService: AuthServiceService
+    private authService: AuthServiceService,
+    private router: Router
   ) {
     this.register = new RequestRegister();
     this.register.email = '';
@@ -24,6 +26,7 @@ export class RegisterComponent {
 async doRegister(){
   try {
     await this.authService.register(this.register);
+    this.router.navigate(['']);
   } catch (error) {
     console.log(error);
   }
