@@ -1,0 +1,81 @@
+div.infocontent img{
+  width: 100%;
+  height:300px;
+  cursor: pointer;
+}
+.leilaocontent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin-bottom: 1rem;
+  padding: 60px;
+}
+.title_area{
+  display:flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #3d3d3d;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 0 10px #000;
+  padding: 10px;
+  height: 50px;
+}
+div.title_area h1{
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 5px;
+  color: #fff;
+}
+div.leilao_info{
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftside{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.leilao_info h2{
+  font-size: 20px;
+  font-weight: bold;
+  color: #3d3d3d;
+  margin-top: 1rem;
+}
+
+div.leilao_info img{
+  width: 800px;
+  height: 500px;
+  border-radius: 20px;
+}
+div.leilao_info_text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+div.leilao_info_text i{
+  font-size: 20px;
+  color: #3d3d3d;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+div.leilao_info_text p{
+  margin-top: 3px;
+  font-size: 18px;
+  color: #3d3d3d;
+}
+div.button_area{
+  margin-top: 1.5rem;
+}
+
+
+

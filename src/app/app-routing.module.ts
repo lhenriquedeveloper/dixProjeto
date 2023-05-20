@@ -3,27 +3,33 @@ import { RouterModule} from '@angular/router';
 import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
+import { DetailComponent } from './pages/detail/detail.component';
 import { RegisterComponent } from './pages/register/register.component';
-
 import { authGuard } from './guard/auth.guard';
 
 
 const routes: Routes = [
-  //Login
+  //Login Route
   {
       path: '',
       component: LoginComponent
   },
-  //Home
+  //Home Route
   {
       path: 'home',
       component: HomeComponent,
       canActivate: [authGuard]
   },
-  //Register
+  //Register Route
   {
     path: 'register',
     component: RegisterComponent,
+  },
+  // Details Route
+  {
+    path: 'details/:id',
+    component: DetailComponent,
+    canActivate: [authGuard],
   },
   //Any Route
   {

@@ -32,6 +32,12 @@ export class AuthServiceService {
     }
   }
 
+  //Logout Function
+  logout(){
+    localStorage.removeItem('token');
+    this.router.navigate(['']);
+  }
+
   //IsAutenticated Function
   isAutenticated(): boolean{
     return Boolean(localStorage.getItem('token'));

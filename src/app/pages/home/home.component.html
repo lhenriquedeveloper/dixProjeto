@@ -25,7 +25,7 @@
             <a href="{{leilao.link}}"aria-label="Assista esse leilão">
               <p-button label="Assistir" icon="pi pi-video" styleClass="p-button-danger"></p-button>
             </a>
-            <p-button label="Mais informações" styleClass="p-button-link" [style]="{ 'margin-left': '.5em' }"></p-button>
+            <p-button label="Mais informações"  [routerLink]="['/details',leilao.id]" styleClass="p-button-link" [style]="{ 'margin-left': '.5em' }"></p-button>
         </ng-template>
     </p-card>
     </div>

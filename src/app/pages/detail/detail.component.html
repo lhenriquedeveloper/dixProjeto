@@ -1,1 +1,24 @@
-<p>detail works!</p>
+<app-header></app-header>
+<div class="infocontent">
+  <img src="../../../assets/leilao.jpg" alt="Divulgação de Leilão">
+</div>
+<div class="leilaocontent">
+  <div class="title_area">
+    <h1>Informações do Leilão</h1>
+  </div>
+  <p-card [style]="{}">
+    <div class="leilao_info">
+      <div class="leftside">
+        <img src="https://bis365.com.br/bid365/storage/{{leilao.image}}" alt="Imagem do Leilão">
+        <h2>{{leilao.name}}</h2>
+      </div>
+      <div class="leilao_info_text">
+         <i class="pi pi-home"> Local: </i><p>{{leilao.city}}</p>
+         <i class="pi pi-calendar"> Data:</i><p>{{leilao.date}}</p>
+         <i class="pi pi-clock"> Horário:</i><p>{{leilao.time}}</p>
+         <i class="pi pi-user"> Responsável:</i><p> {{leilao.contact}}</p>
+         <i class="pi pi-phone"> Telefone:</i><p>{{leilao.phone}}</p>
+         <div class="button_area">
+          <p-button label="Voltar" [routerLink]="['/home']"></p-button>
+         </div>
+</div>
